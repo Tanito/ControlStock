@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from "@angular/forms";
-import { AppointmentService } from '../shared/appointment.service';
 import { ProductoService } from '../shared/producto.service';
 
 @Component({
@@ -14,7 +13,6 @@ export class AddProductPage implements OnInit {
   bookingForm: FormGroup;
 
   constructor(
-    private aptService: AppointmentService,
     private router: Router,
     public fb: FormBuilder,
     private prodService: ProductoService,

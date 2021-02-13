@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormGroup, FormBuilder } from "@angular/forms";
-import { AppointmentService } from '../shared/appointment.service';
 import { ProductoService } from '../shared/producto.service';
 import { NavController } from '@ionic/angular';
 import { AnimationOptions } from '@ionic/angular/providers/nav-controller';
@@ -20,7 +19,6 @@ export class EditProductPage implements OnInit {
   boton: boolean = false;
 
   constructor(
-    private aptService: AppointmentService,
     private actRoute: ActivatedRoute,
     private router: Router,
     public fb: FormBuilder,

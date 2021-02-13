@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-//import { Appointment } from '../shared/Appointment';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
 import { producto } from '../shared/producto';
 
@@ -24,18 +23,18 @@ export class ProductoService {
 
   // Get Single
   getProducto(id: string) {
-    this.bookingRef = this.db.object('/appointment/' + id);
+    this.bookingRef = this.db.object('/producto/' + id);
     return this.bookingRef;
   }
 
   // Get List
   getProductosList() {
-    this.bookingListRef = this.db.list('/appointment');
+    this.bookingListRef = this.db.list('/producto');
     return this.bookingListRef;
   }
 
   // Update
-  updateBooking(id, prod: producto) {
+  updateProducto(id, prod: producto) {
     return this.bookingRef.update({
         nombre: prod.nombre,
         foto: prod.foto,
@@ -45,7 +44,7 @@ export class ProductoService {
 
   // Delete
   deleteProducto(id: string) {
-    this.bookingRef = this.db.object('/appointment/' + id);
+    this.bookingRef = this.db.object('/producto/' + id);
     this.bookingRef.remove();
   }
 }

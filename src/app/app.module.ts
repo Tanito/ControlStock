@@ -6,7 +6,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppointmentService } from './shared/appointment.service';
 import { IonicStorageModule } from '@ionic/storage';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
@@ -39,7 +38,6 @@ import { PipesModule } from './pipes/pipes.module';
     File,
     EmailComposer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AppointmentService
   ],
   bootstrap: [AppComponent]
 })
