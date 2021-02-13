@@ -3,7 +3,6 @@
     <ion-title>Stock</ion-title>
   </ion-toolbar>
   </ion-header>
- <!-- <ion-searchbar placeholder="Buscar producto"></ion-searchbar>-->
   <ion-content>
     <ion-searchbar 
     placeholder="Buscar producto"
@@ -34,33 +33,5 @@
           </ion-item-options>
         </ion-item-sliding>    
     </ion-list>
-  
-   
-   <!-- <ion-list class="ios list-ios hydrated">
      
-      <ion-list-header class="ios hydrated">
-       <h1>Productos</h1>
-      </ion-list-header>
-  
-      <ion-item *ngFor="let producto of Productos" class="user-list">
-        <ion-label>
-          <h2>
-             {{producto.tipo}} de {{producto.sabor}}
-          </h2>
-          <p>
-           Cantidad: {{producto.cantidad}} unidades
-          </p>
-        </ion-label>
-  
-        <div class="item-note" item-end>
-          <button ion-button clear [routerLink]="['/edit-appointment/', producto.$key]">
-            <ion-icon name="create" style="zoom:2.0"></ion-icon>
-          </button>
-          <button ion-button clear (click)="deleteProducto(producto.$key)">
-            <ion-icon name="trash" style="zoom:2.0"></ion-icon>
-          </button>
-        </div>
-      </ion-item>
-   
-    </ion-list>-->
   </ion-content>

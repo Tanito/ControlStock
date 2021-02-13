@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-//import { Appointment } from '../shared/Appointment';
 import { AppointmentService } from './../shared/appointment.service';
 import { ProductoService } from '../shared/producto.service';
 import { producto } from '../shared/producto';
-//import { IonReorderGroup } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/firestore';
-//import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +15,6 @@ export class HomePage implements OnInit {
  textoBuscar = '';
 
   constructor(
-    private aptService: AppointmentService,
     private prodService: ProductoService,
     private firestore: AngularFirestore,
   ) { }
@@ -54,7 +50,6 @@ export class HomePage implements OnInit {
   }
 
   buscar( event ) {
-   //  console.log(event);
     this.textoBuscar = event.detail.value;
   }
 }

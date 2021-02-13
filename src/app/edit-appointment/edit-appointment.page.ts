@@ -42,59 +42,58 @@ export class EditAppointmentPage implements OnInit {
     console.log(this.updateBookingForm.value)
   }
 
-  back(){
-    let animations:AnimationOptions={
+  back() {
+    let animations: AnimationOptions = {
       animated: true,
       animationDirection: "back"
     }
     this.navCtrl.back(animations)
   }
 
-  visible(){
+  visible() {
     this.boton = true;
   }
 
   updateForm() {
     this.prodService.updateBooking(this.id, this.updateBookingForm.value)
       .then(() => {
-      //  this.router.navigate(['/home']);
+        //  this.router.navigate(['/home']);
       })
       .catch(error => console.log(error));
   }
 
-  sumar1(){
+  sumar1() {
 
     this.sumar = this.sumar + 1;
   }
 
-  restar1(){
+  restar1() {
     if (this.sumar > 1) {
-    this.sumar = this.sumar - 1;}
+      this.sumar = this.sumar - 1;
     }
+  }
 
-  mas1(){
+  mas1() {
 
     this.restar = this.restar + 1;
   }
 
-  menos1(){
+  menos1() {
     if (this.restar > 1) {
-      this.restar = this.restar - 1;}
+      this.restar = this.restar - 1;
     }
+  }
 
-    retirar(){
+  retirar() {
+    this.updateBookingForm.value.cantidad = this.updateBookingForm.value.cantidad - this.restar;
+    this.restar = 1;
+  }
 
-      
-     this.updateBookingForm.value.cantidad = this.updateBookingForm.value.cantidad - this.restar;
-     // this.updateBookingForm.value.cantidad = this.updateBookingForm.value.cantidad - this.restar;
-     this.restar = 1;
-    }
+  agregar() {
+    this.updateBookingForm.value.cantidad = this.updateBookingForm.value.cantidad + this.sumar;
+    this.sumar = 1;
 
-    agregar(){
-      this.updateBookingForm.value.cantidad = this.updateBookingForm.value.cantidad + this.sumar;
-      this.sumar = 1;
+  }
 
-    }
 
-    
 }

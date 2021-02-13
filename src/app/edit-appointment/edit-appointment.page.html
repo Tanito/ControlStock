@@ -5,12 +5,7 @@
       <ion-icon name="arrow-back" mode="ios" slot="start" color="primary" (click)="back()" ></ion-icon>
       
       </ion-buttons>
-   
-     <!-- <ion-buttons mode="ios" slot="start" >
-        <ion-back-button text="Atrás" defaultHref="/"></ion-back-button>
-        </ion-buttons>
-      
-      <ion-button mode="ios" (click)="back()"></ion-button>-->
+
     <ion-title>
       Editar Producto
     </ion-title>
@@ -18,8 +13,6 @@
 </ion-header>
 
 <ion-content>
-
-
 
   
     <ion-img src="{{this.updateBookingForm.value.foto}}"></ion-img>
@@ -31,12 +24,6 @@
         <ion-label position="floating">Producto</ion-label>
         <ion-textarea formControlName="nombre" type="text" required rows="2" ></ion-textarea>
       </ion-item>
-<!--
-      <ion-item>
-        <ion-label position="floating">Foto</ion-label>
-        <ion-input formControlName="foto" type="text" required>
-        </ion-input>
-      </ion-item>-->
 
       <ion-item>
         <ion-label position="floating">Cantidad</ion-label>

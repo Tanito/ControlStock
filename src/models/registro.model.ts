@@ -1,5 +1,3 @@
-
-
 export class Registro {
 
     public format: string;

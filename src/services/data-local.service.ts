@@ -31,16 +31,9 @@ export class DataLocalService {
 
 
   guardarRegistro( format: string, text: string ) {
-
-  
-
     const nuevoRegistro = new Registro( format, text );
     this.nombre = ( nuevoRegistro.text );
-
-    console.log(this.nombre);
     this.storage.set('escaneo', this.nombre);
-
-  //  this.abrirRegistro( nuevoRegistro );
   }
 
  /* abrirRegistro( registro: Registro ) {
@@ -61,8 +54,4 @@ export class DataLocalService {
 
   
   }*/
-
-
-
-
 }
