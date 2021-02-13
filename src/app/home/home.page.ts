@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppointmentService } from './../shared/appointment.service';
 import { ProductoService } from '../shared/producto.service';
 import { producto } from '../shared/producto';
-import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-home',
@@ -11,15 +9,14 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 
 export class HomePage implements OnInit {
- Productos = [];
- textoBuscar = '';
+  Productos = [];
+  textoBuscar = '';
 
   constructor(
     private prodService: ProductoService,
-    private firestore: AngularFirestore,
-  ) { }
+   ) { }
 
-   ngOnInit() {
+  ngOnInit() {
 
     this.fetchBookings();
     let bookingRes = this.prodService.getProductosList();
@@ -33,23 +30,19 @@ export class HomePage implements OnInit {
     })
   }
 
-
-
-
   fetchBookings() {
     this.prodService.getProductosList().valueChanges().subscribe(res => {
-      console.log(res)
+
     })
   }
 
   deleteProducto(id) {
-    console.log(id)
     if (window.confirm('Seguro que desea borrarlo?')) {
       this.prodService.deleteProducto(id)
     }
   }
 
-  buscar( event ) {
+  buscar(event) {
     this.textoBuscar = event.detail.value;
   }
 }
