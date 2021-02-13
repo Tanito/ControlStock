@@ -1,5 +1,7 @@
 {
   "name": "ionic-firebase-list",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+      <ion-title class="ios title-ios hydrated">Agregar Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+      <ion-item>
+        <ion-label position="floating">Producto</ion-label>
+        <ion-input formControlName="nombre" type="text" required></ion-input>
+      </ion-item>
+<!--
+      <ion-item>
+        <ion-label position="floating">Foto</ion-label>
+        <ion-input formControlName="foto" type="text" required>
+        </ion-input>
+      </ion-item>
+    -->
+      <ion-item>
+        <ion-label position="floating">Cantidad</ion-label>
+        <ion-input formControlName="cantidad" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Agregar Producto</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

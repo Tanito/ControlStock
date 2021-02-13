@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons mode="ios" slot="start" >
+      
+      <ion-icon name="arrow-back" mode="ios" slot="start" color="primary" (click)="back()" ></ion-icon>
+      
+      </ion-buttons>
+   
+     <!-- <ion-buttons mode="ios" slot="start" >
+        <ion-back-button text="Atrás" defaultHref="/"></ion-back-button>
+        </ion-buttons>
+      
+      <ion-button mode="ios" (click)="back()"></ion-button>-->
+    <ion-title>
+      Editar Producto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  
+    <ion-img src="{{this.updateBookingForm.value.foto}}"></ion-img>
+  
+ 
+  <ion-list lines="full">
+    <form [formGroup]="updateBookingForm" (ngSubmit)="updateForm()">
+      <ion-item>
+        <ion-label position="floating">Producto</ion-label>
+        <ion-textarea formControlName="nombre" type="text" required rows="2" ></ion-textarea>
+      </ion-item>
+<!--
+      <ion-item>
+        <ion-label position="floating">Foto</ion-label>
+        <ion-input formControlName="foto" type="text" required>
+        </ion-input>
+      </ion-item>-->
+
+      <ion-item>
+        <ion-label position="floating">Cantidad</ion-label>
+        <ion-input formControlName="cantidad" type="number" required (ionInput)="visible()">
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-button style="font-size : 25px" color="danger" shape="full" expand="block" (click)="menos1()">-</ion-button>
+          <ion-input min=1 [(ngModel)]="restar" [ngModelOptions]="{standalone: true}" type="number" align=center></ion-input>
+          <ion-button style="font-size : 25px" color="success" shape="full" expand="block" (click)="mas1()">+</ion-button>
+        </ion-item>
+        </ion-col>
+       
+        <ion-col>
+          <ion-item>
+            <ion-button style="font-size : 25px" color="danger" shape="full" expand="block" (click)="restar1()">-</ion-button>
+           <ion-input [(ngModel)]="sumar" [ngModelOptions]="{standalone: true}" type="number" align=center></ion-input>
+           <ion-button style="font-size : 25px" color="success" shape="full" expand="block" (click)="sumar1()">+</ion-button>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block" (click)="retirar()">Retirar</ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block" (click)="agregar()">Agregar</ion-button>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col>
+          <div *ngIf="boton" visible="false">
+          <ion-button type="submit" color="primary" shape="full" expand="block">Guardar Cambios</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+  
+</ion-content>
