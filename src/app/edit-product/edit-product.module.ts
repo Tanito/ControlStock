@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
-import { EditAppointmentPageRoutingModule } from './edit-appointment-routing.module';
-
-import { EditAppointmentPage } from './edit-appointment.page';
+import { EditProductPageRoutingModule } from './edit-product-routing.module';
+import { EditProductPage } from './edit-product.page';
 
 @NgModule({
   imports: [
@@ -14,8 +11,8 @@ import { EditAppointmentPage } from './edit-appointment.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    EditAppointmentPageRoutingModule
+    EditProductPageRoutingModule
   ],
-  declarations: [EditAppointmentPage]
+  declarations: [EditProductPage]
 })
-export class EditAppointmentPageModule { }
+export class EditProductPageModule { }

@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormGroup, FormBuilder } from "@angular/forms";
-import { AppointmentService } from './../shared/appointment.service';
+import { AppointmentService } from '../shared/appointment.service';
 import { ProductoService } from '../shared/producto.service';
 import { NavController } from '@ionic/angular';
 import { AnimationOptions } from '@ionic/angular/providers/nav-controller';
 
 @Component({
-  selector: 'app-edit-appointment',
-  templateUrl: './edit-appointment.page.html',
-  styleUrls: ['./edit-appointment.page.scss'],
+  selector: 'app-edit-product',
+  templateUrl: './edit-product.page.html',
+  styleUrls: ['./edit-product.page.scss'],
 })
 
-export class EditAppointmentPage implements OnInit {
+export class EditProductPage implements OnInit {
   updateBookingForm: FormGroup;
   id: any;
   restar: number = 1;

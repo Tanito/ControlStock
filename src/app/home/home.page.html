@@ -24,7 +24,7 @@
           </ion-item>
     
           <ion-item-options>
-            <ion-button clear [routerLink]="['/add-product/', producto.$key]" routerDirection="forward">
+            <ion-button clear [routerLink]="['/edit-product/', producto.$key]" routerDirection="forward">
               <ion-icon name="create"></ion-icon>
             </ion-button>
            <ion-button clear (click)="deleteProducto(producto.$key)">

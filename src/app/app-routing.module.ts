@@ -9,8 +9,8 @@ const routes: Routes = [
     loadChildren: () => import('./add-product/add-product.module').then( m => m.AddProductPageModule)
   },
   {
-    path: 'edit-appointment/:id',
-    loadChildren: () => import('./edit-appointment/edit-appointment.module').then( m => m.EditAppointmentPageModule)
+    path: 'edit-product/:id',
+    loadChildren: () => import('./edit-product/edit-product.module').then( m => m.EditProductPageModule)
   },
   {
     path: 'scanner',

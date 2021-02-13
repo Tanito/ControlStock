@@ -68,11 +68,8 @@ export class ScannerPage implements OnInit {
   scan() {
 
     this.barcodeScanner.scan().then(barcodeData => {
-      console.log('Barcode data', barcodeData);
       this.nombre = barcodeData.text;
-
       this.dataLocal.guardarRegistro(barcodeData.format, barcodeData.text);
-
       if (!barcodeData.cancelled) {
         this.dataLocal.guardarRegistro(barcodeData.format, barcodeData.text);
 
