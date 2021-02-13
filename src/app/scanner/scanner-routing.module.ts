@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { ScannerPage } from './scanner.page';
 
 const routes: Routes = [
