@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
 
   constructor(
     private prodService: ProductoService,
-   ) { }
+  ) { }
 
   ngOnInit() {
 
@@ -29,19 +29,16 @@ export class HomePage implements OnInit {
       })
     })
   }
-
   fetchBookings() {
     this.prodService.getProductosList().valueChanges().subscribe(res => {
 
     })
   }
-
   deleteProducto(id) {
     if (window.confirm('Seguro que desea borrarlo?')) {
       this.prodService.deleteProducto(id)
     }
   }
-
   buscar(event) {
     this.textoBuscar = event.detail.value;
   }
