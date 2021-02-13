@@ -12,7 +12,7 @@ import { AnimationOptions } from '@ionic/angular/providers/nav-controller';
 })
 
 export class EditProductPage implements OnInit {
-  updateBookingForm: FormGroup;
+  updateProductoForm: FormGroup;
   id: any;
   restar: number = 1;
   sumar: number = 1;
@@ -27,17 +27,17 @@ export class EditProductPage implements OnInit {
   ) {
     this.id = this.actRoute.snapshot.paramMap.get('id');
     this.prodService.getProducto(this.id).valueChanges().subscribe(res => {
-      this.updateBookingForm.setValue(res);
+      this.updateProductoForm.setValue(res);
     });
   }
 
   ngOnInit() {
-    this.updateBookingForm = this.fb.group({
+    this.updateProductoForm = this.fb.group({
       nombre: [''],
       foto: [''],
       cantidad: ['']
     })
-    console.log(this.updateBookingForm.value)
+    console.log(this.updateProductoForm.value)
   }
 
   back() {
@@ -53,7 +53,7 @@ export class EditProductPage implements OnInit {
   }
 
   updateForm() {
-    this.prodService.updateBooking(this.id, this.updateBookingForm.value)
+    this.prodService.updateProducto(this.id, this.updateProductoForm.value)
       .then(() => {
         //  this.router.navigate(['/home']);
       })
@@ -83,12 +83,12 @@ export class EditProductPage implements OnInit {
   }
 
   retirar() {
-    this.updateBookingForm.value.cantidad = this.updateBookingForm.value.cantidad - this.restar;
+    this.updateProductoForm.value.cantidad = this.updateProductoForm.value.cantidad - this.restar;
     this.restar = 1;
   }
 
   agregar() {
-    this.updateBookingForm.value.cantidad = this.updateBookingForm.value.cantidad + this.sumar;
+    this.updateProductoForm.value.cantidad = this.updateProductoForm.value.cantidad + this.sumar;
     this.sumar = 1;
 
   }

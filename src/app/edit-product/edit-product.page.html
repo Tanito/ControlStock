@@ -15,11 +15,11 @@
 <ion-content>
 
   
-    <ion-img src="{{this.updateBookingForm.value.foto}}"></ion-img>
+    <ion-img src="{{this.updateProductoForm.value.foto}}"></ion-img>
   
  
   <ion-list lines="full">
-    <form [formGroup]="updateBookingForm" (ngSubmit)="updateForm()">
+    <form [formGroup]="updateProductoForm" (ngSubmit)="updateForm()">
       <ion-item>
         <ion-label position="floating">Producto</ion-label>
         <ion-textarea formControlName="nombre" type="text" required rows="2" ></ion-textarea>
